@@ -3,7 +3,7 @@
 [Phergie](http://github.com/phergie/phergie-irc-bot-react/) plugin for Helping users make decisions.
 
 [![Build Status](https://secure.travis-ci.org/dstockto/phergie-irc-plugin-react-magic-eightball.png?branch=master)](http://travis-ci.org/dstockto/phergie-irc-plugin-react-magic-eightball)
-[![Coverage Status](https://coveralls.io/repos/dstockto/phergie-irc-plugin-react-magic-eightball/badge.png)](https://coveralls.io/r/dstockto/phergie-irc-plugin-react-magic-eightball)
+[![Coverage Status](https://img.shields.io/coveralls/dstockto/phergie-irc-plugin-react-magic-eightball.svg)](https://coveralls.io/r/dstockto/phergie-irc-plugin-react-magic-eightball)
 
 ## Install
 
