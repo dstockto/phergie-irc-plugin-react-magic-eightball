@@ -1,6 +1,6 @@
 {
     "name": "phergie/phergie-irc-plugin-react-magic-eight-ball",
-    "description": "Phergie plugin for Helps users make decisions",
+    "description": "Phergie plugin for Helping users make decisions",
     "keywords": [ "phergie", "irc", "bot", "plugin" ],
     "license": "BSD-2-Clause",
     "support": {
