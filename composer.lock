@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cd9f7b33c75822fcd2088216e3caa792",
+    "hash": "d92d977a4e92287c9fa56bbe2fdcc74a",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -702,6 +702,63 @@
     ],
     "packages-dev": [
         {
+            "name": "codeclimate/php-test-reporter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codeclimate/php-test-reporter.git",
+                "reference": "d0164df3f0ee530019c3e60f4eadb77755ead0a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codeclimate/php-test-reporter/zipball/d0164df3f0ee530019c3e60f4eadb77755ead0a0",
+                "reference": "d0164df3f0ee530019c3e60f4eadb77755ead0a0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3",
+                "satooshi/php-coveralls": "0.6.*",
+                "symfony/console": ">=2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*@stable"
+            },
+            "bin": [
+                "composer/bin/test-reporter"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "CodeClimate\\Component": "src/",
+                    "CodeClimate\\Bundle": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Code Climate",
+                    "email": "hello@codeclimate.com",
+                    "homepage": "https://codeclimate.com"
+                }
+            ],
+            "description": "PHP client for reporting test coverage to Code Climate",
+            "homepage": "https://github.com/codeclimate/php-test-reporter",
+            "keywords": [
+                "codeclimate",
+                "coverage"
+            ],
+            "time": "2014-11-12 22:05:51"
+        },
+        {
             "name": "guzzle/guzzle",
             "version": "dev-master",
             "source": {
@@ -1223,22 +1280,23 @@
         },
         {
             "name": "satooshi/php-coveralls",
-            "version": "dev-master",
+            "version": "v0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/satooshi/php-coveralls.git",
-                "reference": "2fbf803803d179ab1082807308a67bbd5a760c70"
+                "reference": "dd0df95bd37a7cf5c5c50304dfe260ffe4b50760"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/satooshi/php-coveralls/zipball/2fbf803803d179ab1082807308a67bbd5a760c70",
-                "reference": "2fbf803803d179ab1082807308a67bbd5a760c70",
+                "url": "https://api.github.com/repos/satooshi/php-coveralls/zipball/dd0df95bd37a7cf5c5c50304dfe260ffe4b50760",
+                "reference": "dd0df95bd37a7cf5c5c50304dfe260ffe4b50760",
                 "shasum": ""
             },
             "require": {
+                "ext-curl": "*",
                 "ext-json": "*",
                 "ext-simplexml": "*",
-                "guzzle/guzzle": ">=2.7",
+                "guzzle/guzzle": ">=3.0",
                 "php": ">=5.3",
                 "psr/log": "1.0.0",
                 "symfony/config": ">=2.0",
@@ -1248,7 +1306,7 @@
             },
             "require-dev": {
                 "apigen/apigen": "2.8.*@stable",
-                "pdepend/pdepend": "dev-master as 2.0.0",
+                "pdepend/pdepend": "dev-master",
                 "phpmd/phpmd": "dev-master",
                 "phpunit/php-invoker": ">=1.1.0,<1.2.0",
                 "phpunit/phpunit": "3.7.*@stable",
@@ -1257,22 +1315,14 @@
                 "squizlabs/php_codesniffer": "1.4.*@stable",
                 "theseer/fdomdocument": "dev-master"
             },
-            "suggest": {
-                "symfony/http-kernel": "Allows Symfony integration"
-            },
             "bin": [
                 "composer/bin/coveralls"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.7-dev"
-                }
-            },
             "autoload": {
                 "psr-0": {
-                    "Satooshi\\Component": "src/",
-                    "Satooshi\\Bundle": "src/"
+                    "Contrib\\Component": "src/",
+                    "Contrib\\Bundle": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1294,7 +1344,7 @@
                 "github",
                 "test"
             ],
-            "time": "2014-11-11 15:35:34"
+            "time": "2013-05-04 08:07:33"
         },
         {
             "name": "sebastian/comparator",
@@ -1302,12 +1352,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "6f67d2ae044ba17ba30573941f4ac96c4777be97"
+                "reference": "c484a80f97573ab934e37826dba0135a3301b26a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/6f67d2ae044ba17ba30573941f4ac96c4777be97",
-                "reference": "6f67d2ae044ba17ba30573941f4ac96c4777be97",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/c484a80f97573ab934e37826dba0135a3301b26a",
+                "reference": "c484a80f97573ab934e37826dba0135a3301b26a",
                 "shasum": ""
             },
             "require": {
@@ -1358,7 +1408,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2014-10-21 10:04:18"
+            "time": "2014-11-16 21:32:38"
         },
         {
             "name": "sebastian/diff",
@@ -1617,12 +1667,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "0f59dca5634f4fe95320ad81a3a7c0997bbc53df"
+                "reference": "39956d14381127cb9b0869a41d29bedcf433d4c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/0f59dca5634f4fe95320ad81a3a7c0997bbc53df",
-                "reference": "0f59dca5634f4fe95320ad81a3a7c0997bbc53df",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/39956d14381127cb9b0869a41d29bedcf433d4c1",
+                "reference": "39956d14381127cb9b0869a41d29bedcf433d4c1",
                 "shasum": ""
             },
             "require": {
@@ -1665,7 +1715,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-11-11 08:37:22"
+            "time": "2014-11-16 17:28:29"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1732,12 +1782,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Filesystem.git",
-                "reference": "d369d79337045fdcb2c47d1cacc128367bd18b98"
+                "reference": "5bbd9f52cd5ebf7ea85f447b779fcfa8a25a95e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/d369d79337045fdcb2c47d1cacc128367bd18b98",
-                "reference": "d369d79337045fdcb2c47d1cacc128367bd18b98",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/5bbd9f52cd5ebf7ea85f447b779fcfa8a25a95e7",
+                "reference": "5bbd9f52cd5ebf7ea85f447b779fcfa8a25a95e7",
                 "shasum": ""
             },
             "require": {
@@ -1770,7 +1820,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "http://symfony.com",
-            "time": "2014-11-10 18:00:54"
+            "time": "2014-11-16 17:28:20"
         },
         {
             "name": "symfony/stopwatch",
@@ -1871,7 +1921,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "phergie/phergie-irc-bot-react": 20,
-        "satooshi/php-coveralls": 20
+        "codeclimate/php-test-reporter": 20
     },
     "prefer-stable": false,
     "platform": [],

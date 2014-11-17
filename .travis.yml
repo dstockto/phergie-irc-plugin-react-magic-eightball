@@ -24,3 +24,4 @@ script:
 
 after_script:
   - php vendor/bin/coveralls -v
+  - CODECLIMATE_REPO_TOKEN=a15d02e7151a8bdd326349a94309e3f7ce4181e21e3f01d7304232ef2b8525ad ./vendor/bin/test-reporter
