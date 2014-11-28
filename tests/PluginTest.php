@@ -12,8 +12,8 @@ namespace Pergie\Irc\Tests\Plugin\React\MagicEightBall;
 
 use Phake;
 use Phergie\Irc\Bot\React\EventQueueInterface as Queue;
-use Phergie\Irc\Plugin\React\MagicEightBall\Plugin;
 use Phergie\Irc\Plugin\React\MagicEightBall\AnswerProvider;
+use Phergie\Irc\Plugin\React\MagicEightBall\Plugin;
 
 /**
  * Tests for the Plugin class.
@@ -24,6 +24,7 @@ use Phergie\Irc\Plugin\React\MagicEightBall\AnswerProvider;
 class PluginTest extends \PHPUnit_Framework_TestCase
 {
     protected $plugin;
+    /** @var \PHPUnit_Framework_MockObject_MockObject|AnswerProvider */
     protected $provider;
 
     function setUp()
@@ -32,6 +33,16 @@ class PluginTest extends \PHPUnit_Framework_TestCase
             ->getMock();
 
         $this->plugin = new Plugin($this->provider);
+    }
+
+    /**
+     * Ensures the default AnswerProvider is created if no provider is sent into the constructor
+     */
+    public function testDefaultProviderIsSetIfNotProvided()
+    {
+        $plugin = new Plugin();
+
+        $this->assertAttributeInstanceOf('Phergie\Irc\Plugin\React\MagicEightBall\AnswerProvider', 'provider', $plugin);
     }
 
     /**

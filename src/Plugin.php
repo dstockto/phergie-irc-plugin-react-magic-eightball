@@ -28,8 +28,11 @@ class Plugin extends AbstractPlugin
      */
     protected $provider;
 
-    public function __construct(AnswerProvider $provider)
+    public function __construct(AnswerProvider $provider = null)
     {
+        if (is_null($provider)) {
+            $provider = new EightballProvider();
+        }
         $this->provider = $provider;
     }
 

@@ -27,10 +27,18 @@ The Magic Eightball plugin requires a response provider with the AnswerProvider 
 with the plugin but you can provide your own class if you want to provide different answers.
 
 ```php
+new \Phergie\Irc\Plugin\React\MagicEightBall\Plugin()
+```
+
+By default, the Plugin will provide \Phergie\Irc\Plugin\React\MagicEightBall\EightballProvider() if you do not 
+specify a provider. You can also create your own provider and send it into the plugin to get different responses.
+
+```php
 new \Phergie\Irc\Plugin\React\MagicEightBall\Plugin(
-    new \Phergie\Irc\Plugin\React\MagicEightBall\EightballProvider()
+    new \Phergie\Irc\Plugin\React\MagicEightBall\EightballProvider() // Replace with your own provider
 )
 ```
+
 
 ## Tests
 
