@@ -13,7 +13,7 @@ The recommended method of installation is [through composer](http://getcomposer.
 ```JSON
 {
     "require": {
-        "phergie/phergie-irc-plugin-react-magic-eight-ball": "dev-master"
+        "phergie/phergie-irc-plugin-react-magic-eight-ball": "1.0"
     }
 }
 ```
